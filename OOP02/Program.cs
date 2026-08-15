@@ -1,4 +1,6 @@
-﻿namespace OOP02
+﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+
+namespace OOP02
 {
     internal class Program
     {
@@ -86,8 +88,8 @@
 
             //DeliveryAddress address1 = new DeliveryAddress("Street 1", "Cairo", 10);
             //StandardShipment s1 = new StandardShipment( "SH001", "Laptop", 3, 80,address1);
-            
-            
+
+
             //DeliveryAddress address2 =new DeliveryAddress("Street 2", "Giza", 20);
             //ExpressShipment s2 = new ExpressShipment("SH002", "Mobile Phone",2,60,address2,30);
 
@@ -138,6 +140,29 @@
 
             // CompletedShipment is sealed, so another class cannot inherit from it .
             // GenerateCustomsReport() is sealed , so it cannot be overridden by another derived class.
+
+            #region OOP04
+            #region Part01
+            //Q1)
+            // a) Abstraction is the process of hiding the implementation details and showing only the essential features of an object to the user.
+            //b) Because it reduces complexilty , enhances security , provides maintainabilty , flexibility and reusibility.
+
+            //Q2)
+            //a) Abstract class is a class where it contains some concrete methods and other abstract method .
+            //So that other classes will inherit from it where they inherit the complete methods and implement the abstract ones.
+            //It contains fields , constructors , and it can use any access modifier.
+
+            //Interface  defines a contract where classes that implement the interface must provide the implementation.
+            //It does not contain any fields or constructors ,it can contain only method, property ,event, indexer and constant definitions.
+
+            //b)when you want to define a contract that different classes can implement.
+            //It is useful when you want a class to have multiple behaviors because a class can implement multiple interfaces.
+
+            //c)No, a class cannot inherit from multiple abstract classes because C# supports single class inheritance.
+            ////Yes, a class can implement multiple interfaces.
+
+            #endregion
+            #endregion
 
         }
     }
