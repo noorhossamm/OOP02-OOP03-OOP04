@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OOP02
 {
-    internal class Shipment
+    internal abstract class Shipment
     {
         #region Attributes
         private string trackingCode;
@@ -79,13 +79,7 @@ namespace OOP02
             }
         }
 
-        public virtual decimal EstimatedCost
-        {
-            get
-            {
-                return (DeliveryFee + (Weight * 5));
-            }
-        }
+        public abstract decimal EstimatedCost();
         #endregion
 
         #region Constructor
@@ -120,16 +114,7 @@ namespace OOP02
 
         }
 
-        public virtual void PrintShipmentDetails()
-        {
-            Console.WriteLine($"Tracking Code: {TrackingCode}");
-            Console.WriteLine($"Description: {Description}");
-            Console.WriteLine($"Weight: {Weight} kg");
-            Console.WriteLine($"Delivery Fee: ${DeliveryFee}");
-            Console.WriteLine($"Estimated Cost: ${EstimatedCost}");
-            Console.WriteLine($"Destination Address: {Destination.GetFullAddress()}");
-        }
-
+        public abstract void PrintShipmentDetails();
         #endregion
 
         override public string ToString()

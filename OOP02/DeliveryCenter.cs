@@ -134,6 +134,31 @@ namespace OOP02
             }
         }
 
+        public void PrintTrackingStatuses()
+        {
+            foreach(ITrackable shipment in shipments)
+            {
+                if (shipment != null)
+                {
+                    Console.WriteLine($"{shipment.GetTrackingStatus()}");
+
+                }
+
+            }
+ 
+        }
+
+        public void PrintInsurability() 
+        { 
+            foreach( IInsurable shipment in shipments)
+            {
+                if(shipment != null)
+                {
+                    Console.WriteLine($"Insurabilty for shipment is: {shipment.CalculateInsurance()}");
+                }
+            }
+        }
+
 
     }
         #endregion

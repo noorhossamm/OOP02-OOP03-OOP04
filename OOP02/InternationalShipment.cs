@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OOP02
 {
-    internal class InternationalShipment :Shipment
+    internal class InternationalShipment :Shipment , ITrackable , IInsurable
     {
         private string destinationCountry;
         private decimal customsFee;
@@ -40,17 +40,14 @@ namespace OOP02
             }
         }
 
-        public override decimal EstimatedCost
-        {
-            get
-            {
-                return DeliveryFee + (Weight * 5) + CustomsFee;
-            }
-        }
 
         public override void PrintShipmentDetails()
         {
-            base.PrintShipmentDetails();
+            Console.WriteLine($"Tracking Code : {TrackingCode}");
+            Console.WriteLine($"Description   : {Description}");
+            Console.WriteLine($"Weight        : {Weight} KG");
+            Console.WriteLine($"Delivery Fee  : {DeliveryFee} EGP");
+            Console.WriteLine($"Estimated Cost: {EstimatedCost} EGP");
             Console.WriteLine($"Destination Country: {DestinationCountry}");
             Console.WriteLine($"Customs Fee: ${CustomsFee}");
         }
@@ -58,6 +55,24 @@ namespace OOP02
         public virtual void GenerateCustomsReport()
         {
             Console.WriteLine($"Customs Report: {TrackingCode} - {DestinationCountry} - Customs Fee: {CustomsFee} EGP");
+        }
+
+        public override decimal EstimatedCost()
+        {
+
+            return DeliveryFee + (Weight * 5) + CustomsFee;
+        }
+
+        public string GetTrackingStatus()
+        {
+
+            return $"Shipment {TrackingCode} has been Delivered.";
+
+        }
+
+        public decimal CalculateInsurance()
+        {
+            return EstimatedCost() *0.12m;
         }
     }
 }

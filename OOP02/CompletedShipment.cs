@@ -10,5 +10,19 @@ namespace OOP02
             : base(trackingCode, description, weight, deliveryFee, destination)
         {
         }
+
+        public override decimal EstimatedCost()
+        {
+            return DeliveryFee + (Weight * 5);
+        }
+
+        public override void PrintShipmentDetails()
+        {
+            Console.WriteLine($"Tracking Code : {TrackingCode}");
+            Console.WriteLine($"Description   : {Description}");
+            Console.WriteLine($"Weight        : {Weight} KG");
+            Console.WriteLine($"Delivery Fee  : {DeliveryFee} EGP");
+            Console.WriteLine($"Estimated Cost: {EstimatedCost} EGP");
+        }
     }
 }
