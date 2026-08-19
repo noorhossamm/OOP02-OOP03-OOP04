@@ -23,6 +23,12 @@ namespace OOP02
             TotalShipmentsCreated = 0;
             Console.WriteLine("Shipment System Initialized");
         }
+
+
+        public static int GetTotalShipmentsCreated()
+        {
+            return TotalShipmentsCreated;
+        }
         public string TrackingCode
         {
             get
