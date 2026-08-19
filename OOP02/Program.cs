@@ -281,7 +281,7 @@ namespace OOP02
             #endregion
 
             #region Question03
-            Shipment s1 = new StandardShipment("SH-101", "Laptop", 3, 80, new DeliveryAddress("Cairo", "Tahrir", 15));
+            //Shipment s1 = new StandardShipment("SH-101", "Laptop", 3, 80, new DeliveryAddress("Cairo", "Tahrir", 15));
             //Shipment original = s1;
 
             //Shipment deepCopy = original.DeepCopy();
@@ -299,7 +299,42 @@ namespace OOP02
             #endregion
 
 
+            //Shipment s1 = new StandardShipment("SH-101", "Laptop", 3, 80, new DeliveryAddress("Cairo", "Tahrir", 15));
 
+
+            //Shipment s2 = s1;
+
+            //Console.WriteLine($"Same Object? {object.ReferenceEquals(s1, s2)}");
+            //Console.WriteLine($"shipment1 HashCode : {s1.GetHashCode()}");
+            //Console.WriteLine($"shipment2 HashCode : {s2.GetHashCode()}"); 
+
+            //creating shallow and deep copy is in Question02 and Question03
+
+            //Static counter
+
+
+            Shipment s1 = new ExpressShipment("SH-102","Mobile",60,100,new DeliveryAddress("Giza", "Main Street", 20),20);
+
+            Shipment s2 = new InternationalShipment("SH-103", "TV",8,120,new DeliveryAddress("Alexandria", "Street 3", 30),"Germany",100);
+
+            Console.WriteLine($"Total Shipments Created : {Shipment.GetTotalShipmentsCreated()}");
+
+
+            // The static constructor is called automatically by the CLR before the first use of Shipment ,it prints that the system is initialiazed
+
+            Console.WriteLine($"Total Shipments Created : {Shipment.GetTotalShipmentsCreated()}");
+
+            DeliveryUtilities.PrintSystemTitle();
+
+            //Shipment Extensions
+            Console.WriteLine(s1.GetSummary());
+            Console.WriteLine("---------------------------");
+            Console.WriteLine(s2.GetSummary());
+
+            Console.WriteLine("---------------------------");
+
+            Console.WriteLine($"s1 Is Delivered? {s1.IsDelivered()}");
+            Console.WriteLine($"s2 Is Delivered? {s2.IsDelivered()}");
 
             #endregion
             #endregion

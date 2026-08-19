@@ -104,6 +104,7 @@ namespace OOP02
             Weight = 1;
             DeliveryFee = 50;
             Destination = new DeliveryAddress("Unknown", "Unknown", 0);
+            TotalShipmentsCreated++;
 
         }
         public Shipment(string trackingCode, string description, decimal weight, decimal deliveryFee, DeliveryAddress destination)
@@ -113,6 +114,7 @@ namespace OOP02
             Weight = weight;
             DeliveryFee = deliveryFee;
             Destination = destination;
+            TotalShipmentsCreated++;
 
         }
         #endregion
