@@ -278,8 +278,24 @@ namespace OOP02
             //Console.WriteLine($"After change:");
             //Console.WriteLine($"Original : {original.Destination.City}");
             //Console.WriteLine($"Copied   : {shallowCopy.Destination.City}");
+            #endregion
 
+            #region Question03
+            //Shipment s1 = new StandardShipment("SH-101", "Laptop", 3, 80, new DeliveryAddress("Cairo", "Tahrir", 15));
+            //Shipment original = s1;
 
+            //Shipment deepCopy = original.DeepCopy();
+
+            //Console.WriteLine($"Before change:");
+            //Console.WriteLine($"Original : {original.Destination.City}");
+            //Console.WriteLine($"Copied   : {deepCopy.Destination.City}");
+
+            //deepCopy.Destination.City = "Giza";
+
+            //Console.WriteLine();
+            //Console.WriteLine($"After changing :");
+            //Console.WriteLine($"Original : {original.Destination.City}");
+            //Console.WriteLine($"Copied   : {deepCopy.Destination.City}");
             #endregion
 
 
