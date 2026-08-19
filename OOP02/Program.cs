@@ -1,4 +1,7 @@
-﻿using System.Xml.Linq;
+﻿using System.Net;
+using System.Runtime.Intrinsics.X86;
+using System.Threading.Channels;
+using System.Xml.Linq;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace OOP02
@@ -166,57 +169,57 @@ namespace OOP02
 
 
             #region Part02
-            DeliveryCenter center = new DeliveryCenter("Delivery Center");
+            //DeliveryCenter center = new DeliveryCenter("Delivery Center");
 
-            DeliveryAddress address1 = new DeliveryAddress("Street 1", "Cairo", 10);
-            StandardShipment s1 = new StandardShipment("SH001", "Laptop", 3, 80, address1);
-
-
-            DeliveryAddress address2 = new DeliveryAddress("Street 2", "Giza", 20);
-            ExpressShipment s2 = new ExpressShipment("SH002", "Mobile Phone", 2, 60, address2, 30);
-
-            DeliveryAddress address3 = new DeliveryAddress("Street 3", "Alexandria", 30);
-            InternationalShipment s3 = new InternationalShipment("SH003", "Television", 8, 120, address3, "Germany", 100);
-
-            center.AddShipment(s1);
-            center.AddShipment(s2);
-            center.AddShipment(s3);
-
-            center.PrintAllShipments();
-            Console.WriteLine("----------------------------------");
-
-            Console.WriteLine("Tracking status :");
-            center.PrintTrackingStatuses();
-
-            Console.WriteLine("----------------------------------");
-            Console.WriteLine("Insurance:");
-            center.PrintInsurability();
-
-            Console.WriteLine("----------------------------------");
-            ITrackable[] trackable =
-            {
-                s1,s2,s3
-            };
-            foreach(ITrackable t in trackable)
-            {
-                Console.WriteLine(t.GetTrackingStatus());
-
-            }
+            //DeliveryAddress address1 = new DeliveryAddress("Street 1", "Cairo", 10);
+            //StandardShipment s1 = new StandardShipment("SH001", "Laptop", 3, 80, address1);
 
 
+            //DeliveryAddress address2 = new DeliveryAddress("Street 2", "Giza", 20);
+            //ExpressShipment s2 = new ExpressShipment("SH002", "Mobile Phone", 2, 60, address2, 30);
+
+            //DeliveryAddress address3 = new DeliveryAddress("Street 3", "Alexandria", 30);
+            //InternationalShipment s3 = new InternationalShipment("SH003", "Television", 8, 120, address3, "Germany", 100);
+
+            //center.AddShipment(s1);
+            //center.AddShipment(s2);
+            //center.AddShipment(s3);
+
+            //center.PrintAllShipments();
+            //Console.WriteLine("----------------------------------");
+
+            //Console.WriteLine("Tracking status :");
+            //center.PrintTrackingStatuses();
+
+            //Console.WriteLine("----------------------------------");
+            //Console.WriteLine("Insurance:");
+            //center.PrintInsurability();
+
+            //Console.WriteLine("----------------------------------");
+            //ITrackable[] trackable =
+            //{
+            //    s1,s2,s3
+            //};
+            //foreach(ITrackable t in trackable)
+            //{
+            //    Console.WriteLine(t.GetTrackingStatus());
+
+            //}
 
 
 
-            Console.WriteLine("----------------------------------");
-            IInsurable[] insurability =
-            {
-                s1,s2,s3
-            };
 
-            foreach (IInsurable i in insurability)
-            {
-                Console.WriteLine($"Insurance Cost: {i.CalculateInsurance()} EGP");
-            }
+
+            //Console.WriteLine("----------------------------------");
+            //IInsurable[] insurability =
+            //{
+            //    s1,s2,s3
+            //};
+
+            //foreach (IInsurable i in insurability)
+            //{
+            //    Console.WriteLine($"Insurance Cost: {i.CalculateInsurance()} EGP");
+            //}
 
 
             #endregion
@@ -256,10 +259,27 @@ namespace OOP02
             //c.Inside a static class.
             //d.No.It can only access members that are accessible from where the extension method is declared
 
+            #endregion
 
+            #region Part02
+            #region Question02
+            //Shipment s1 = new StandardShipment("SH-101", "Laptop", 3, 80, new DeliveryAddress("Cairo", "Tahrir", 15));
+            //Shipment original = s1;
 
+            //Shipment shallowCopy = original.ShallowCopy();
 
+            //Console.WriteLine($"Before change:");
+            //Console.WriteLine($"Original : {original.Destination.City}");
+            //Console.WriteLine($"Copied   : {shallowCopy.Destination.City}");
 
+            //shallowCopy.Destination.City = "Giza";
+
+            //Console.WriteLine();
+            //Console.WriteLine($"After change:");
+            //Console.WriteLine($"Original : {original.Destination.City}");
+            //Console.WriteLine($"Copied   : {shallowCopy.Destination.City}");
+
+            #endregion
 
 
 
