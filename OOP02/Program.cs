@@ -238,6 +238,23 @@ namespace OOP02
             //d.New copies of the referenced objects are created so the original and copied objects have independent reference type members.
             //e.when you need to modify the copied object's reference data without affecting the original object.
 
+            //Q3)
+            //a.A static field belongs to the class itself, so there is only one shared copy for all objects of that class.
+            //An instance field belongs to each object, so every object has its own separate copy.
+
+            //b. A static method a method that belongs to the class itself rather than a specific object. No.
+
+
+            //c.It is a constuctor used to initialize static members of a class. It has no parameters and no access modifier.
+            //It is executed automatically once before the class is first used
+
+            //d.A static class contains only static members and cannot be instantiated. no.
+
+
+
+
+
+
 
             #endregion
             #endregion
