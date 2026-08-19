@@ -281,7 +281,7 @@ namespace OOP02
             #endregion
 
             #region Question03
-            //Shipment s1 = new StandardShipment("SH-101", "Laptop", 3, 80, new DeliveryAddress("Cairo", "Tahrir", 15));
+            Shipment s1 = new StandardShipment("SH-101", "Laptop", 3, 80, new DeliveryAddress("Cairo", "Tahrir", 15));
             //Shipment original = s1;
 
             //Shipment deepCopy = original.DeepCopy();
@@ -297,8 +297,6 @@ namespace OOP02
             //Console.WriteLine($"Original : {original.Destination.City}");
             //Console.WriteLine($"Copied   : {deepCopy.Destination.City}");
             #endregion
-
-
 
 
 
