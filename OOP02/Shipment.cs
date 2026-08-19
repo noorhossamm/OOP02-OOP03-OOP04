@@ -17,6 +17,12 @@ namespace OOP02
 
         #region Properties
         public DeliveryAddress Destination { get; set; }
+
+        static Shipment()
+        {
+            TotalShipmentsCreated = 0;
+            Console.WriteLine("Shipment System Initialized");
+        }
         public string TrackingCode
         {
             get
