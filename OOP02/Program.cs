@@ -1,4 +1,5 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿using System.Xml.Linq;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace OOP02
 {
@@ -228,6 +229,14 @@ namespace OOP02
             //b.No it is just one object but 2 variables refer to it.
             //c.Copying the reference means both variables point to the same object so changes through one variable affects the other.
             //Copying the object means creating a separate object  with copied data so changes to one object do not necessarily affect the other.
+
+
+            //Q2)
+            //a.A shallow copy creates a new object and copies all value type fields but for reference type fields only the references are copied (both objects point to the same nested objects).
+            //b.A Deep Copy creates a new object and also creates independent copies of its reference type members.
+            //c.The reference is copied so both the original and copied objects refer to the same referenced object
+            //d.New copies of the referenced objects are created so the original and copied objects have independent reference type members.
+            //e.when you need to modify the copied object's reference data without affecting the original object.
 
 
             #endregion
