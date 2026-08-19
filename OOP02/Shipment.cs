@@ -11,6 +11,8 @@ namespace OOP02
         private string description;
         private decimal weight;
         private decimal deliveryFee;
+
+        private static int TotalShipmentsCreated;
         #endregion
 
         #region Properties
