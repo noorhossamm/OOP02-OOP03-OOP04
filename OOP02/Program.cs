@@ -221,6 +221,21 @@ namespace OOP02
             #endregion
             #endregion
 
+            #region OOP05
+            #region Part01
+            //Q1)
+            //a.Both will refer to the same object as the second variable receives a reference to the same object in memory.
+            //b.No it is just one object but 2 variables refer to it.
+            //c.Copying the reference means both variables point to the same object so changes through one variable affects the other.
+            //Copying the object means creating a separate object  with copied data so changes to one object do not necessarily affect the other.
+
+
+            #endregion
+            #endregion
+
+
+
+
         }
     }
 }
