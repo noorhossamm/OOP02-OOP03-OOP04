@@ -133,5 +133,29 @@ namespace OOP02
             if (newWeight > 0 && extraPackingWeight >= 0)
                 Weight = newWeight + extraPackingWeight;
         }
+
+        public Shipment DeepCopy()
+        {
+            Shipment copy = (Shipment)MemberwiseClone();
+
+            copy.Destination = new DeliveryAddress(
+                    Destination.City,
+                    Destination.Street,
+                    Destination.BuildingNumber);
+
+            return copy;
+        }
+
+
+        public Shipment CopyShipment()
+        {
+            return DeepCopy();
+        }
+        //Assigning one variable to another makes 2 variables be refering to one object while creating an actual copy makes 2 different objects 
+
+        public Shipment ShallowCopy()
+        {
+            return (Shipment)MemberwiseClone();
+        }
     }
 }
