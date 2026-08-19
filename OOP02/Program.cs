@@ -250,6 +250,13 @@ namespace OOP02
 
             //d.A static class contains only static members and cannot be instantiated. no.
 
+            //Q4)
+            //a.Extension methods let you add new methods to existing types without modifying the original type or creating a new derived type.
+            //b.this
+            //c.Inside a static class.
+            //d.No.It can only access members that are accessible from where the extension method is declared
+
+
 
 
 
